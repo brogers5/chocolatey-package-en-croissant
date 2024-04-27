@@ -1,23 +1,23 @@
-VERIFICATION
+﻿VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The packaged Windows installer binary is available for independent download via the
 Releases page on En Croissant's GitHub repository. A download link for the packaged version
 is included at the following URL:
-https://github.com/franciscoBSalgueiro/en-croissant/releases/tag/v0.10.0
+%tagReleaseUrl%
 
 For convenience, this is a direct URL to the relevant asset:
-https://github.com/franciscoBSalgueiro/en-croissant/releases/download/v0.10.0/en-croissant_0.10.0_x64_en-US.msi
+%binaryUrl%
 
-The following PowerShell command will print a calculated SHA256 hash:
+The following PowerShell command will print a calculated %checksumType% hash:
 
-    (Get-FileHash -Path en-croissant_0.10.0_x64_en-US.msi -Algorithm SHA256).Hash
+    (Get-FileHash -Path %binaryFileName% -Algorithm %checksumType%).Hash
 
 This command should be executed against an independently downloaded binary, as well
 as the copy distributed with the package. Both hash values should be identical. A
 matching hash value should confirm that no corruption or tampering has occurred
 during this package's generation process.
 
-For reference, the following SHA256 hash was calculated during the package's automated creation:
-81EA5BBA5F7818316987841E7A22A4F2FECB166B512307A741036C219DEDE6A3
+For reference, the following %checksumType% hash was calculated during the package's automated creation:
+%checksumValue%

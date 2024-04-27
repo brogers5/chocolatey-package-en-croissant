@@ -1,24 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>
-    <id>en-croissant</id>
-    <version>0.10.0</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-en-croissant/tree/v0.10.0</packageSourceUrl>
-    <owners>sublym0nal</owners>
-    <title>En Croissant - The Ultimate Chess Toolkit</title>
-    <authors>Francisco Salgueiro</authors>
-    <projectUrl>https://encroissant.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-en-croissant@997009f54daa82d14c05998c3f979e1418641b45/en-croissant.png</iconUrl>
-    <copyright>Copyleft (ɔ) 2023-2024 Francisco Salgueiro</copyright>
-    <licenseUrl>https://github.com/franciscoBSalgueiro/en-croissant/blob/v0.10.0/LICENSE</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/franciscoBSalgueiro/en-croissant/tree/v0.10.0</projectSourceUrl>
-    <docsUrl>https://encroissant.org/docs/</docsUrl>
-    <mailingListUrl>https://github.com/franciscoBSalgueiro/en-croissant/discussions</mailingListUrl>
-    <bugTrackerUrl>https://github.com/franciscoBSalgueiro/en-croissant/issues</bugTrackerUrl>
-    <tags>en-croissant chess analysis engine database uci pgn fen 64-bit foss cross-platform embedded</tags>
-    <summary>An open-source, cross-platform chess GUI that aims to be powerful, customizable and easy to use.</summary>
-    <description><![CDATA[
+
 ## En Croissant - The Ultimate Chess Toolkit
 
 En-Croissant is an open-source, cross-platform chess GUI that aims to be powerful, customizable and easy to use.
@@ -59,18 +39,3 @@ En-Croissant is an open-source, cross-platform chess GUI that aims to be powerfu
   - Run multiple Engines to find the optimal move
   - Search a reference database for exact or similar games, and forecast the current game's results with a given move
   - Annotate moves
-]]></description>
-    <releaseNotes>https://github.com/franciscoBSalgueiro/en-croissant/releases/tag/v0.10.0</releaseNotes>
-    <dependencies>
-      <!--Version should actually be 109.0.1518.140, but this version was not packaged-->
-      <dependency id="webview2-runtime" version="110.0.1587.46" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\chocolateyinstall.ps1" target="tools" />
-    <file src="tools\chocolateyuninstall.ps1" target="tools" />
-    <file src="tools\en-croissant_*_x64_en-US.msi" target="tools" />
-    <file src="tools\LICENSE.txt" target="tools" />
-    <file src="tools\VERIFICATION.txt" target="tools" />
-  </files>
-</package>
