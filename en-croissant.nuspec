@@ -2,17 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>en-croissant</id>
-    <version>0.11.0</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-en-croissant/tree/v0.11.0</packageSourceUrl>
+    <version>0.11.1</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-en-croissant/tree/v0.11.1</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>En Croissant - The Ultimate Chess Toolkit</title>
     <authors>Francisco Salgueiro</authors>
     <projectUrl>https://encroissant.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-en-croissant@997009f54daa82d14c05998c3f979e1418641b45/en-croissant.png</iconUrl>
     <copyright>Copyleft (ɔ) 2023-2024 Francisco Salgueiro</copyright>
-    <licenseUrl>https://github.com/franciscoBSalgueiro/en-croissant/blob/v0.11.0/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/franciscoBSalgueiro/en-croissant/blob/v0.11.1/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/franciscoBSalgueiro/en-croissant/tree/v0.11.0</projectSourceUrl>
+    <projectSourceUrl>https://github.com/franciscoBSalgueiro/en-croissant/tree/v0.11.1</projectSourceUrl>
     <docsUrl>https://encroissant.org/docs/</docsUrl>
     <mailingListUrl>https://github.com/franciscoBSalgueiro/en-croissant/discussions</mailingListUrl>
     <bugTrackerUrl>https://github.com/franciscoBSalgueiro/en-croissant/issues</bugTrackerUrl>
@@ -60,7 +60,7 @@ En-Croissant is an open-source, cross-platform chess GUI that aims to be powerfu
   - Search a reference database for exact or similar games, and forecast the current game's results with a given move
   - Annotate moves
 ]]></description>
-    <releaseNotes>https://github.com/franciscoBSalgueiro/en-croissant/releases/tag/v0.11.0</releaseNotes>
+    <releaseNotes>https://github.com/franciscoBSalgueiro/en-croissant/releases/tag/v0.11.1</releaseNotes>
     <dependencies>
       <!--Version should actually be 109.0.1518.140, but this version was not packaged-->
       <dependency id="webview2-runtime" version="110.0.1587.46" />
