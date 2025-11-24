@@ -11,7 +11,7 @@ if ($null -ne $legacyRegistryKey) {
   Uninstall-MsiPackage
 }
 
-$installerFileName = 'en-croissant_0.11.1_x64_en-US.msi'
+$installerFileName = 'en-croissant_0.12.0_x64-setup.exe'
 $filePath = Join-Path -Path $toolsDir -ChildPath $installerFileName
 
 $packageArgs = @{
