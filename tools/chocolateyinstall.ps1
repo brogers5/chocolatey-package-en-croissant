@@ -1,17 +1,26 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+. $toolsDir\helpers.ps1
+
+$legacyRegistryKey = Get-MsiUninstallRegistryKey
+if ($null -ne $legacyRegistryKey) {
+  Write-Warning "A legacy MSI-based installation of en-croissant (v$($legacyRegistryKey.DisplayVersion)) was detected.
+    To prevent possible issues with installation coexistence, this version will be uninstalled.
+    While your files, databases, and engines should persist between installation types,
+    you may need to readd your User Accounts and reconfigure your Settings."
+  Uninstall-MsiPackage
+}
 
 $installerFileName = 'en-croissant_0.11.1_x64_en-US.msi'
 $filePath = Join-Path -Path $toolsDir -ChildPath $installerFileName
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  unzipLocation  = $toolsDir
-  fileType       = 'MSI'
+  fileType       = 'EXE'
   file64         = $filePath
   softwareName   = 'en-croissant'
-  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
-  validExitCodes = @(0, 3010, 1641)
+  silentArgs     = '/S'
+  validExitCodes = @(0)
 }
 
 Install-ChocolateyInstallPackage @packageArgs

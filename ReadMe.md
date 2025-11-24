@@ -21,7 +21,7 @@ choco install en-croissant --source="'.;https://community.chocolatey.org/api/v2/
 
 [Install Chocolatey](https://chocolatey.org/install), the [Chocolatey Automatic Package Updater Module](https://github.com/majkinetor/au), and the [PowerShellForGitHub PowerShell Module](https://github.com/microsoft/PowerShellForGitHub), then clone this repository.
 
-Once cloned, simply run `build.ps1`. The MSI is intentionally untracked to avoid bloating the repository, so the script will download the En Croissant installer MSI from the official distribution point, then packs everything together.
+Once cloned, simply run `build.ps1`. The EXE is intentionally untracked to avoid bloating the repository, so the script will download the En Croissant installer EXE from the official distribution point, then packs everything together.
 
 A successful build will create `en-croissant.x.y.z.nupkg`, where `x.y.z` should be the Nuspec's normalized `version` value at build time.
 

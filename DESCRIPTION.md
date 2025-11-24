@@ -39,3 +39,15 @@ En-Croissant is an open-source, cross-platform chess GUI that aims to be powerfu
   - Run multiple Engines to find the optimal move
   - Search a reference database for exact or similar games, and forecast the current game's results with a given move
   - Annotate moves
+
+## Package Notes
+
+The installer executed by this package was built using Nullsoft Scriptable Install System (NSIS). For advanced setup scenarios, refer to [NSIS's command-line interface documentation](https://nsis.sourceforge.io/Docs/Chapter3.html#installerusage). Any desired arguments can be appended to (or optionally overriding with the `--override-arguments` switch) the package's default install arguments with the `--install-arguments` option.
+
+---
+
+For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
+
+```shell
+choco feature enable --name="'useRememberedArgumentsForUpgrades'"
+```

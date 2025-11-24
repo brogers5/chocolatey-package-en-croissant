@@ -1,6 +1,6 @@
 ﻿Import-Module PowerShellForGitHub
 
-$installerFileNameRegex = 'en-croissant_([\d\.]+)_x64_en-US\.msi$'
+$installerFileNameRegex = 'en-croissant_([\d\.]+)_x64-setup\.exe$'
 $owner = 'franciscoBSalgueiro'
 $repository = 'en-croissant'
 

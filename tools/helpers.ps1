@@ -1,0 +1,68 @@
+﻿$softwareName = 'en-croissant'
+[array] $keys = Get-UninstallRegistryKey -SoftwareName $softwareName
+
+function Get-MsiUninstallRegistryKey {
+    if ($keys.Count -ge 1) {
+        $keys | ForEach-Object {
+            if ($_.UninstallString.StartsWith('MsiExec.exe /X{')) {
+                return $_
+            }
+        }
+    }
+
+    return $null
+}
+
+function Uninstall-ExePackage {
+    $packageArgs = @{
+        packageName    = $env:ChocolateyPackageName
+        softwareName   = $softwareName
+        fileType       = 'EXE'
+        silentArgs     = '/S'
+        validExitCodes = @(0)
+    }
+
+    if ($keys.Count -eq 1) {
+        $keys | ForEach-Object {
+            $packageArgs['file'] = "$($_.UninstallString)"
+            Uninstall-ChocolateyPackage @packageArgs
+        }
+    }
+    elseif ($keys.Count -eq 0) {
+        Write-Warning "$env:ChocolateyPackageName has already been uninstalled by other means."
+    }
+    elseif ($keys.Count -gt 1) {
+        Write-Warning "$($keys.Count) matches found!"
+        Write-Warning 'To prevent accidental data loss, no programs will be uninstalled.'
+        Write-Warning 'Please alert package maintainer the following keys were matched:'
+        $keys | ForEach-Object { Write-Warning "- $($_.DisplayName)" }
+    }
+}
+
+function Uninstall-MsiPackage {
+    $packageArgs = @{
+        packageName    = $env:ChocolateyPackageName
+        softwareName   = 'en-croissant'
+        fileType       = 'MSI'
+        silentArgs     = '/qn /norestart'
+        validExitCodes = @(0, 3010, 1605, 1614, 1641)
+    }
+
+    if ($keys.Count -eq 1) {
+        $keys | ForEach-Object {
+            $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
+            $packageArgs['file'] = ''
+
+            Uninstall-ChocolateyPackage @packageArgs
+        }
+    }
+    elseif ($keys.Count -eq 0) {
+        Write-Warning "$packageName has already been uninstalled by other means."
+    }
+    elseif ($keys.Count -gt 1) {
+        Write-Warning "$($keys.Count) matches found!"
+        Write-Warning 'To prevent accidental data loss, no programs will be uninstalled.'
+        Write-Warning 'Please alert package maintainer the following keys were matched:'
+        $keys | ForEach-Object { Write-Warning "- $($_.DisplayName)" }
+    }
+}

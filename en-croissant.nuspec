@@ -69,7 +69,8 @@ En-Croissant is an open-source, cross-platform chess GUI that aims to be powerfu
   <files>
     <file src="tools\chocolateyinstall.ps1" target="tools" />
     <file src="tools\chocolateyuninstall.ps1" target="tools" />
-    <file src="tools\en-croissant_*_x64_en-US.msi" target="tools" />
+    <file src="tools\helpers.ps1" target="tools" />
+    <file src="tools\en-croissant_*_x64-setup.exe" target="tools" />
     <file src="tools\LICENSE.txt" target="tools" />
     <file src="tools\VERIFICATION.txt" target="tools" />
   </files>
