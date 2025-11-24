@@ -47,7 +47,7 @@ En-Croissant is an open-source, cross-platform chess GUI that aims to be powerfu
   - Native support for some popular databases
     - [Ajedrez Data's Over the Board (OTB)](https://ajedrezdata.com/databases/otb/)
     - [Ajedrez Data's Correspondence (CORR)](https://ajedrezdata.com/databases/corr/)
-    - [Caissabase](http://caissabase.co.uk/)
+    - Caissabase
     - [MillionBase](https://rebel13.nl/rebel13/rebel%2013.html)
   - Create a database from a [Lichess](https://lichess.org/) or [Chess.com](https://www.chess.com/) account's game history
   - Track player wins/draws/losses, Elo, [International Chess Federation (FIDE) statistics](https://ratings.fide.com/), and openings
