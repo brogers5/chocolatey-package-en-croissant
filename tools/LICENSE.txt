@@ -1,4 +1,4 @@
-From: https://raw.githubusercontent.com/franciscoBSalgueiro/en-croissant/v0.12.1/LICENSE
+From: https://raw.githubusercontent.com/franciscoBSalgueiro/en-croissant/v0.12.2/LICENSE
 
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007

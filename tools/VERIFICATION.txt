@@ -5,14 +5,14 @@ in verifying that this package's contents are trustworthy.
 The packaged Windows installer binary is available for independent download via the
 Releases page on En Croissant's GitHub repository. A download link for the packaged version
 is included at the following URL:
-https://github.com/franciscoBSalgueiro/en-croissant/releases/tag/v0.12.1
+https://github.com/franciscoBSalgueiro/en-croissant/releases/tag/v0.12.2
 
 For convenience, this is a direct URL to the relevant asset:
-https://github.com/franciscoBSalgueiro/en-croissant/releases/download/v0.12.1/en-croissant_0.12.1_x64-setup.exe
+https://github.com/franciscoBSalgueiro/en-croissant/releases/download/v0.12.2/en-croissant_0.12.2_x64-setup.exe
 
 The following PowerShell command will print a calculated SHA256 hash:
 
-    (Get-FileHash -Path en-croissant_0.12.1_x64-setup.exe -Algorithm SHA256).Hash
+    (Get-FileHash -Path en-croissant_0.12.2_x64-setup.exe -Algorithm SHA256).Hash
 
 This command should be executed against an independently downloaded binary, as well
 as the copy distributed with the package. Both hash values should be identical. A
@@ -20,4 +20,4 @@ matching hash value should confirm that no corruption or tampering has occurred
 during this package's generation process.
 
 For reference, the following SHA256 hash was calculated during the package's automated creation:
-E40E94ACB3EF2D3AE59F9407C8C49BC11ED06F290313C90A9A9457A2866B51AF
+235625DBCC4102F457E0342EE3B8768EB785736DA2A988D1C87D42E6EAA5BD8C
